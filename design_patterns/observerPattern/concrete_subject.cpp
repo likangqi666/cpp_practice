@@ -3,6 +3,7 @@
 void ConcreteSubject::AddObserver(Observer * observer)
 {
     this->observer_list.insert(observer);
+    return;
 }
 
 void ConcreteSubject::RemoveObserver(Observer * observer)
@@ -16,9 +17,11 @@ void ConcreteSubject::NotifyObserver()
     {
         *i->Update(this->value);
     }
+    return;
 }
 
 void ConcreteSubject::ChangeValue(double new_value)
 {
     this->value = new_value;
+    return;
 }
